@@ -1,6 +1,4 @@
-import { FC } from "react"
 import { Href } from "../href"
-import { FormProps } from "../form"
 import { TimelineProps } from "../timeline"
 import { ProjectProps } from "../project"
 
@@ -12,20 +10,6 @@ export const getTimelineProps = (t: (key: string) => string, key: "work1" | "stu
         },
         event: t(`exp.${key}.event`),
         desc: t(`exp.${key}.desc`)
-    }
-}
-
-
-export const getFormProps = (t: (key: string) => string): FormProps => {
-    return {
-        info: t('info'),
-        name: t('form.name'),
-        email: t('form.email'),
-        message: t('form.message'),
-        topic: t('form.topic'),
-        send: t('form.send'),
-        messagePlaceholder: t('form.messagePlaceholder'),
-        topicPlaceholder: t('form.topicPlaceholder')
     }
 }
 

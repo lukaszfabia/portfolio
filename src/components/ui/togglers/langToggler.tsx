@@ -1,12 +1,12 @@
 'use client';
-import React, { useState, useTransition } from 'react';
+import React, { FC, useState, useTransition } from 'react';
 import { WrapFlagsProps, Flag } from '../../../../lib/flag';
 import { locales } from '@/i18n';
 import { usePathname, useRouter } from 'next/navigation';
 import { POL } from '../../../../constants/pol';
 import { ENG } from '../../../../constants/eng';
 
-const WrapFlags = ({ changeLanguage, availableLangs, flags }: WrapFlagsProps) => {
+const WrapFlags: FC<WrapFlagsProps> = ({ changeLanguage, availableLangs, flags }) => {
     return (
         <ul className="py-2 font-medium" role="none">
             {availableLangs.map((lang: string, index: number) => (
