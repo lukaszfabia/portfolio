@@ -1,67 +1,67 @@
 {
-    "Navbar": {
-        "projects": "Projekty",
-        "about": "O mnie",
-        "contact": "Kontakt"
+  "Navbar": {
+    "projects": "Projekty",
+    "about": "O mnie",
+    "contact": "Kontakt"
+  },
+  "Home": {
+    "id": "home",
+    "whoami": "Łukasz Fabia",
+    "whatido": "Fullstack Developer",
+    "desc": "Jestem studentem 3 roku <f>Informatyki Stosowanej</f> na <a>Politechnice Wrocławskiej</a>. Końcem 2019 roku rozpoczynałem swoją naukę z C++ a obecnie interesuję się głównie technologiami webowymi.",
+    "cv": "Pobierz CV",
+    "afterDownload": "Pobrano",
+    "contact": "Kontakt"
+  },
+  "Projects": {
+    "id": "projects",
+    "title": "Projekty",
+    "myanimedb": {
+      "title": "MyAnimeDB",
+      "desc": "Strona internetowa do przeglądania i oceniania anime, stworzona na wzór MyAnimeList.net oraz Shinden.pl. Wykonana w ramach przedmiotu na zajęcia.",
+      "imgs": "/examples/myanimedb/anime_search.png;/examples/myanimedb/home_page_posts.png;/examples/myanimedb/home_page.png;/examples/myanimedb/login.png;/examples/myanimedb/profile.png;/examples/myanimedb/restore_password.png;/examples/myanimedb/settings.png;/examples/myanimedb/mylist.png",
+      "link": "https://github.com/lukaszfabia/myAnimeDB/",
+      "technologies": "React.js;Bootstrap 5;Django;Python"
     },
-    "Home": {
-        "id": "home",
-        "whoami": "Łukasz Fabia",
-        "whatido": "Fullstack Developer",
-        "desc": "Jestem studentem 3 roku <f>Informatyki Stosowanej</f> na <a>Politechnice Wrocławskiej</a>. Końcem 2019 roku rozpoczynałem swoją naukę z C++ a obecnie interesuję się głównie technologiami webowymi.",
-        "cv": "Pobierz CV",
-        "afterDownload": "Pobrano",
-        "contact": "Kontakt"
-    },
-    "Projects": {
-        "id": "projects",
-        "title": "Projekty",
-        "myanimedb": {
-            "title": "MyAnimeDB",
-            "desc": "Strona internetowa do przeglądania i oceniania anime, stworzona na wzór MyAnimeList.net oraz Shinden.pl. Wykonana w ramach przedmiotu na zajęcia.",
-            "imgs": "/examples/myanimedb/anime_search.png;/examples/myanimedb/home_page_posts.png;/examples/myanimedb/home_page.png;/examples/myanimedb/login.png;/examples/myanimedb/profile.png;/examples/myanimedb/restore_password.png;/examples/myanimedb/settings.png;/examples/myanimedb/mylist.png",
-            "link": "https://github.com/lukaszfabia/myAnimeDB/",
-            "technologies": "React.js;Bootstrap 5;Django"
-        },
-        "it-salary-predictor": {
-            "title": "IT Salary Predictor",
-            "desc": "Strona internetowa służąca do przewidywania zarobków oraz do prezentacji analizy ofert pracy w branży IT. Wykonana przy okazji realiazji projektu z analizy danych. Model do przewidywania zarobków został stworzony przy użyciu GradientBoostingRegressor.",
-            "imgs": "/examples/it-salary-predictor.png",
-            "link": "https://github.com/lukaszfabia/IT-salary-predictor",
-            "technologies": "Next.js;FastAPI;MongoDB;Python;TailwindCSS"
-        }
-    },
-    "AboutMe": {
-        "id": "about",
-        "title": "O mnie",
-        "content": "Interesuję się programowaniem od 2019 roku, ale dopiero na studiach mogłem bardziej rozwinąć pasję. Obecnie najbardziej interesuję się technologiami webowymi, takimi jak <n>Next.js</n>, <d>Django</d>, <f>FastAPI</f>, ale nie jestem osobą zamkniętą na inne dziedziny Informatyki chociażby takie jak systemy wbudowane. Jestem osobą, która stara się tworzyć projekty mające sens oraz takie, które można łatwo skalować. W przyszłości chciałbym pracować jako <postion>Fullstack Developer</postion>.",
-        "exp": {
-            "studies": {
-                "time": {
-                    "month": "Paźdzeirnik",
-                    "year": "2022"
-                },
-                "event": "Rozpoczęcie studiów na kierunku Informatyka Stosowana na Politechnice Wrocławskiej",
-                "desc": "Studia pozwoliły mi na rozwinięcie pasji do programowania, nauczyły mnie pracy w grupie, oraz dostaryczyły mi ogrom teorii informatycznej."
-            },
-            "work1": {
-                "time": {
-                    "month": "Lorem",
-                    "year": "ipsum"
-                },
-                "event": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-                "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur elit ut arcu commodo, ac dictum velit vestibulum. Proin id ornare dui, nec egestas nibh. Morbi quis ornare neque, et semper dui. Quisque varius dolor at lacus sodales pulvinar. Suspendisse mollis iaculis mauris, id gravida augue accumsan ut. Sed vulputate euismod feugiat."
-            }
-        }
-    },
-    "Contact": {
-        "id": "contact",
-        "title": "Kontakt",
-        "available": "Dostępny jestem również na:",
-        "textToAnimate": "Porozmawiajmy",
-        "linkText": "Napisz do mnie"
-    },
-    "Footer": {
-        "rights": "Wszelkie prawa zastrzeżone"
+    "it-salary-predictor": {
+      "title": "IT Salary Predictor",
+      "desc": "Strona internetowa służąca do przewidywania zarobków oraz do prezentacji analizy ofert pracy w branży IT.",
+      "link": "https://github.com/lukaszfabia/it-salary-predictor/",
+      "imgs": "/examples/it-salary-predictor/home.png;/examples/it-salary-predictor/params.png;/examples/it-salary-predictor/salary.png;/examples/it-salary-predictor/stats1.png;/examples/it-salary-predictor/stats2.png",
+      "technologies": "Next.js;FastAPI;Python;TailwindCSS"
     }
+  },
+  "AboutMe": {
+    "id": "about",
+    "title": "O mnie",
+    "content": "Interesuję się programowaniem od 2019 roku, ale dopiero na studiach mogłem bardziej rozwinąć pasję. Obecnie najbardziej interesuję się technologiami webowymi, takimi jak <n>Next.js</n>, <d>Django</d>, <f>FastAPI</f>, ale nie jestem osobą zamkniętą na inne dziedziny Informatyki chociażby takie jak systemy wbudowane. Jestem osobą, która stara się tworzyć projekty mające sens oraz takie, które można łatwo skalować. W przyszłości chciałbym pracować jako <postion>Fullstack Developer</postion>.",
+    "exp": {
+      "studies": {
+        "time": {
+          "month": "Paźdzeirnik",
+          "year": "2022"
+        },
+        "event": "Rozpoczęcie studiów na kierunku Informatyka Stosowana na Politechnice Wrocławskiej",
+        "desc": "Studia pozwoliły mi na rozwinięcie pasji do programowania, nauczyły mnie pracy w grupie, oraz dostaryczyły mi ogrom teorii informatycznej."
+      },
+      "work1": {
+        "time": {
+          "month": "Lorem",
+          "year": "ipsum"
+        },
+        "event": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur elit ut arcu commodo, ac dictum velit vestibulum. Proin id ornare dui, nec egestas nibh. Morbi quis ornare neque, et semper dui. Quisque varius dolor at lacus sodales pulvinar. Suspendisse mollis iaculis mauris, id gravida augue accumsan ut. Sed vulputate euismod feugiat."
+      }
+    }
+  },
+  "Contact": {
+    "id": "contact",
+    "title": "Kontakt",
+    "available": "Dostępny jestem również na:",
+    "textToAnimate": "Porozmawiajmy",
+    "linkText": "Napisz do mnie"
+  },
+  "Footer": {
+    "rights": "Wszelkie prawa zastrzeżone"
+  }
 }
