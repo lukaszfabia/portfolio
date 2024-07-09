@@ -13,20 +13,20 @@ import ScalaIcon from "../../public/techs/scala.svg";
 import { FC } from "react";
 
 export const TechStack: FC = () => {
-    return (
-        <div className="flex flex-wrap justify-center items-center mt-5">
-            <DockerIcon />
-            <CppIcon />
-            <PythonIcon />
-            <JavaIcon />
-            <CSharpIcon />
-            <BashIcon />
-            <TypeScriptIcon />
-            <GitIcon />
-            <CssIcon />
-            <HtmlIcon />
-            <OcamlIcon />
-            <ScalaIcon />
-        </div>
-    )
-}
+  return (
+    <div className="flex flex-wrap justify-center items-center py-5">
+      <DockerIcon />
+      <CppIcon />
+      <PythonIcon />
+      <JavaIcon />
+      <CSharpIcon />
+      <BashIcon />
+      <TypeScriptIcon />
+      <GitIcon />
+      <CssIcon />
+      <HtmlIcon />
+      <OcamlIcon />
+      <ScalaIcon />
+    </div>
+  );
+};

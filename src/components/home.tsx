@@ -16,7 +16,7 @@ export const Home: FC = () => {
   return (
     <AnimatePresence mode="wait">
       <section
-        className="flex lg:flex-row lg:text-left text-center md:py-10 py-20"
+        className="flex lg:flex-row lg:text-left text-center md:py-10 py-20 mb-10"
         id={t("id")}
       >
         <div className="lg:flex-1 mb-8 md:mb-0">
