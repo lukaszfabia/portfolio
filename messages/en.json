@@ -25,10 +25,10 @@
     },
     "it-salary-predictor": {
       "title": "IT Salary Predictor",
-      "desc": "A website used to predict earnings and to present the analysis of job offers in the IT industry. Made during the implementation of a data analysis project. The earnings prediction model was created using GradientBoostingRegressor.",
+      "desc": "A website used to predict earnings and to present the analysis of job offers in the IT industry. Prediction is based on machine learning.",
       "link": "https://github.com/lukaszfabia/it-salary-predictor/",
-      "imgs": "/examples/it-salary-predictor/home.png;/examples/it-salary-predictor/params.png;/examples/it-salary-predictor/salary.png;/examples/it-salary-predictor/stats1.png;/examples/it-salary-predictor/stats2.png;",
-      "technologies": "Next.js;FastAPI;MongoDB;Python;TailwindCSS"
+      "imgs": "/examples/it-salary-predictor/home.png;/examples/it-salary-predictor/params.png;/examples/it-salary-predictor/salary.png;/examples/it-salary-predictor/stats1.png;/examples/it-salary-predictor/stats2.png",
+      "technologies": "Next.js;FastAPI;Python;TailwindCSS"
     }
   },
   "AboutMe": {

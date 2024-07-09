@@ -1,4 +1,4 @@
-export const handleDownload = (event: React.MouseEvent<HTMLButtonElement>, setLoading: (loading: boolean) => void, setDownload: (download: boolean) => void, lang: string) => {
+export const handleDownload = (event: React.MouseEvent<HTMLButtonElement>, setLoading: (loading: boolean) => void, setDownload: (download: boolean) => void, lang: string): void => {
     const path: string = `/cv/${lang}/LukaszFabia.pdf`;
     event.preventDefault();
     setLoading(true);

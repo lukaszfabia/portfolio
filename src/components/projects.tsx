@@ -1,33 +1,33 @@
 import { useTranslations } from "next-intl";
 import Link from "next/link";
-import React from "react";
+import React, { FC } from "react";
 import { ProjectProps } from "../../lib/project";
 import ImageSlider from "./ui/sliders/slider";
-import { SectionWrapper } from "./wrapper";
+import { SectionWrapper } from "./utils/wrapper";
 import { getProjectProps } from "../../lib/scripts/getProps";
 
-const ShowcaseConetnt = ({
-  link,
-  title,
-  desc,
-}: {
+const ShowcaseConetnt: FC<{
   link: string;
   title: string;
   desc: string;
+}> = ({
+  link,
+  title,
+  desc,
 }) => {
-  return (
-    <div className="px-6 py-4">
-      <div className="font-bold text-xl mb-2 md:text-left text-center">
-        <Link href={link} target="_blank" className="hover:underline">
-          <code>{title}</code>
-        </Link>
+    return (
+      <div className="px-6 py-4">
+        <div className="font-bold text-xl mb-2 md:text-left text-center">
+          <Link href={link} target="_blank" className="hover:underline">
+            <code>{title}</code>
+          </Link>
+        </div>
+        <p className="text-gray-700 dark:text-gray-500 text-base">{desc}</p>
       </div>
-      <p className="text-gray-700 dark:text-gray-500 text-base">{desc}</p>
-    </div>
-  );
-};
+    );
+  };
 
-const ShowcaseTechStack = ({ techstack }: { techstack: string[] }) => {
+const ShowcaseTechStack: FC<{ techstack: string[] }> = ({ techstack }) => {
   return (
     <>
       <code className="px-6 py-4">tech-stack</code>
@@ -44,7 +44,7 @@ const ShowcaseTechStack = ({ techstack }: { techstack: string[] }) => {
   );
 };
 
-const Showcase = ({ projects }: { projects: ProjectProps[] }) => {
+const Showcase: FC<{ projects: ProjectProps[] }> = ({ projects }) => {
   return (
     <div className="flex lg:flex-row flex-col items-center justify-center">
       {projects.map((project, key) => (
@@ -73,7 +73,7 @@ const Showcase = ({ projects }: { projects: ProjectProps[] }) => {
   );
 };
 
-export const Projects = () => {
+export const Projects: FC = () => {
   const t = useTranslations<string>("Projects");
 
   const myanimedb: ProjectProps = getProjectProps(t, "myanimedb");

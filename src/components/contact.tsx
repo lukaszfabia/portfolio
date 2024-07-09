@@ -1,5 +1,5 @@
 import { useTranslations } from "next-intl"
-import { SectionWrapper } from "./wrapper";
+import { SectionWrapper } from "./utils/wrapper";
 import React, { FC } from "react";
 import Link from "next/link";
 import { Social, Socials } from "../../lib/social";

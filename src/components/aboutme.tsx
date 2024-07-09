@@ -1,7 +1,7 @@
 import { useTranslations } from "next-intl";
 import { TimelineProps } from "../../lib/timeline";
 import React, { FC } from "react";
-import { SectionWrapper } from "./wrapper";
+import { SectionWrapper } from "./utils/wrapper";
 import { TechStack } from "../../constants/aboutme/techstack";
 import { getTimelineProps } from "../../lib/scripts/getProps";
 

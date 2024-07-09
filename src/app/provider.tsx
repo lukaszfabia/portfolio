@@ -1,9 +1,9 @@
 'use client';
 
 import { ThemeProvider } from "next-themes";
-import { ReactNode } from "react";
+import { FC, ReactNode } from "react";
 
-export function Providers({ children }: { children: ReactNode }) {
+export const Providers: FC<{ children: ReactNode }> = ({ children }) => {
     return (
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
             {children}

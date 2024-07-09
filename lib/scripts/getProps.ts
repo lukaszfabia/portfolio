@@ -1,7 +1,10 @@
 import { FC } from "react"
 import { Href } from "../href"
+import { FormProps } from "../form"
+import { TimelineProps } from "../timeline"
+import { ProjectProps } from "../project"
 
-export const getTimelineProps = (t: (key: string) => string, key: "work1" | "studies") => {
+export const getTimelineProps = (t: (key: string) => string, key: "work1" | "studies"): TimelineProps => {
     return {
         time: {
             month: t(`exp.${key}.time.month`),
@@ -13,7 +16,7 @@ export const getTimelineProps = (t: (key: string) => string, key: "work1" | "stu
 }
 
 
-export const getFormProps = (t: (key: string) => string) => {
+export const getFormProps = (t: (key: string) => string): FormProps => {
     return {
         info: t('info'),
         name: t('form.name'),
@@ -26,7 +29,7 @@ export const getFormProps = (t: (key: string) => string) => {
     }
 }
 
-export const getProjectProps = (t: (key: string) => string, projectName: string, sep: string = ";", width: number = 2880, height: number = 1550) => {
+export const getProjectProps = (t: (key: string) => string, projectName: string, sep: string = ";", width: number = 2880, height: number = 1550): ProjectProps => {
     return {
         title: t(`${projectName}.title`),
         description: t(`${projectName}.desc`),
