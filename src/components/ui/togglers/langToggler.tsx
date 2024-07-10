@@ -59,12 +59,12 @@ export default function LangToggler() {
             <button
                 onClick={() => setDropDownOpen(!dropDownOpen)}
                 type="button"
-                className="inline-flex items-center font-medium justify-center px-4 py-2 text-sm text-gray-900 dark:text-white rounded-lg cursor-pointer hover:bg-gray-100 dark:hover:bg-black dark:hover:text-white focus:outline-none focus:ring-2 focus:ring-gray-200 dark:focus:ring-gray-600 transition-all ease-in-out duration-300"
+                className="inline-flex mr-2 items-center font-medium justify-center px-4 py-2 text-sm text-gray-900 dark:text-white rounded-lg cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white focus:outline-none focus:ring-2 focus:ring-gray-200 dark:focus:ring-gray-600 transition-all ease-in-out duration-300"
                 aria-controls="language-dropdown-menu"
             >
                 {matchLang(currentLang)}
             </button>
-            <div className={`absolute backdrop-blur-md z-50 top-10 right-0 mt-2 text-base list-none divide-y divide-gray-100 rounded-lg ${dropDownOpen ? 'block' : 'hidden'}`} id="language-dropdown-menu">
+            <div className={`absolute backdrop-blur-md mr-2 z-50 top-10 right-0 mt-2 text-base list-none divide-y divide-gray-100 rounded-lg ${dropDownOpen ? 'block' : 'hidden'}`} id="language-dropdown-menu">
                 <WrapFlags changeLanguage={changeLanguage} availableLangs={locales} flags={flags} />
             </div>
         </div >

@@ -8,7 +8,7 @@ import { getTimelineProps } from "../../lib/scripts/getProps";
 
 const Timeline: FC<{ props: TimelineProps[] }> = ({ props }) => {
     return (
-        <div className="lg:flex-1 lg:mt-0 mt-10">
+        <div className="md:flex-1 md:mt-0 mt-10">
             <ol className="relative border-s border-gray-200 dark:border-gray-700">
                 {props.map((elem: TimelineProps, index: number) => (
                     <React.Fragment key={index}>
@@ -27,7 +27,7 @@ const Timeline: FC<{ props: TimelineProps[] }> = ({ props }) => {
 
 const Content: FC<{ t: any }> = ({ t }) => {
     return (
-        <div className="lg:flex-1 text-lg font-poppins text-center lg:text-left lg:pr-7">
+        <div className="md:flex-1 text-lg font-poppins text-center md:text-left md:pr-7">
             {t.rich('content', {
                 n: (chunks: React.ReactNode) => (
                     <code className="bg-gradient-to-tr from-blue-900 to-red-500 dark:from-blue-500 dark:to-red-300 inline-block text-transparent bg-clip-text">{chunks}</code>
@@ -42,7 +42,7 @@ const Content: FC<{ t: any }> = ({ t }) => {
                     <code className="bg-gradient-to-tr from-rose-400 via-pink-700 to-indigo-800 inline-block text-transparent bg-clip-text">{chunks}</code>
                 )
             })}
-            <div className="lg:flex-1 lg:mt-0 py-10">
+            <div className="md:flex-1 md:mt-0 py-10">
                 <h1 className="text-4xl font-semibold text-center text-gray-500 dark:text-gray-400">Worked with</h1>
                 <TechStack />
             </div>
@@ -64,7 +64,7 @@ export const AboutMe: FC = () => {
 
     return (
         <SectionWrapper t={t} gradient="from-blue-300 via-red-500 to-amber-500">
-            <div className="lg:flex flex-row lg:mb-10">
+            <div className="md:flex flex-row md:mb-10">
                 <Content t={t} />
                 <Timeline props={props} />
             </div>

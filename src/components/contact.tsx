@@ -45,7 +45,7 @@ const MailToMe: FC<{ linkText: string }> = ({ linkText }) => {
             <motion.a whileHover={{ scale: 1.1, background: 'linear-gradient(90deg, rgba(255,0,150,1) 0%, rgba(0,204,255,1) 100%)' }}
                 whileTap={{ scale: 0.9 }}
                 transition={{ type: 'spring', stiffness: 300 }}
-                href="mailto:ufabia03@gmail.com" className="flex items-center justify-center text-white bg-blue-500 text-center rounded-full lg:h-1/3 lg:w-1/3 mb-10 lg:p-0 p-4">
+                href="mailto:ufabia03@gmail.com" className="flex items-center justify-center text-white bg-blue-500 text-center rounded-full md:`h-1/3 md:`w-1/3 mb-10 md:`p-0 p-4">
                 <FontAwesomeIcon icon={faPaperPlane} className="w-4 h-4 mr-2" />
                 {linkText}
             </motion.a>
@@ -60,7 +60,7 @@ export const Contact: FC = () => {
 
     return (
         <SectionWrapper t={t} gradient="from-rose-500 via-pink-700 to-indigo-500">
-            <div className="lg:flex flex-row">
+            <div className="md:flex flex-row">
                 <MailToMe linkText={linkText} />
                 <MySocials text={t('available')} socials={socials} />
 

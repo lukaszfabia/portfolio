@@ -3,6 +3,8 @@ import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { ContactButton, CvButton } from "./ui/buttons/buttons";
 import { FC } from "react";
+import Image from "next/image";
+
 
 export const Home: FC = () => {
   const t = useTranslations<string>("Home");
@@ -13,13 +15,16 @@ export const Home: FC = () => {
       ? "https://pwr.edu.pl/en/"
       : "https://pwr.edu.pl/pl/";
 
+  const pathToAvatar: string = "";
+
+
   return (
     <AnimatePresence mode="wait">
       <section
-        className="flex lg:flex-row lg:text-left text-center md:py-10 py-20 mb-10"
+        className="flex flex-col-reverse md:flex-row md:text-left text-center md:py-14 md:mb-10"
         id={t("id")}
       >
-        <div className="lg:flex-1 mb-8 md:mb-0">
+        <div className="md:flex-1 mb-8 md:mb-0">
           <motion.h1
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -43,10 +48,10 @@ export const Home: FC = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="lg:text-lg"
+            className="md:text-md"
           >
             {t.rich("desc", {
-              a: (chunks: React.ReactNode) => (
+              a: (chunks) => (
                 <a
                   href={linkToUni}
                   target="_blank"
@@ -55,7 +60,7 @@ export const Home: FC = () => {
                   {chunks}
                 </a>
               ),
-              f: (chunks: React.ReactNode) => <code>{chunks}</code>,
+              f: (chunks) => <code>{chunks}</code>,
             })}
           </motion.p>
 
@@ -71,7 +76,10 @@ export const Home: FC = () => {
             <CvButton text={t("cv")} afterDownload={t("afterDownload")} />
           </motion.div>
         </div>
-        <div className="lg:flex-1">{/* img */}</div>
+        <div className="md:flex-1 flex items-center justify-center mb-8 md:mb-0 pt-5 lg:pt-0 md:pb-20">
+          <img src="https://placehold.co/200x200" alt="" className="rounded-full shadow-lg w-1/3" />
+          {/* <Image src={pathToAvatar} alt="me" className="rounded-full shadow-lg w-1/3"  /> */}
+        </div>
       </section>
     </AnimatePresence>
   );

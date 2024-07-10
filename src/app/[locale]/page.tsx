@@ -26,7 +26,7 @@ export default function Index() {
 
     return (
         <>
-            <motion.div className="fixed top-0 left-0 right-0 h-1 bg-gray-500 z-30" style={{ scaleX: scaleX, transformOrigin: "0%" }} />
+            <motion.div className="fixed top-0 left-0 right-0 h-1 bg-gray-200 dark:bg-gray-800 z-30" style={{ scaleX: scaleX, transformOrigin: "0%" }} />
             <main className='p-8 md:p-32 mt-10'>
                 {components.map(({ Component, key }, index) => (
                     <FadeInSection key={key} delay={index * 0.1}>

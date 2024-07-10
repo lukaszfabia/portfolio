@@ -27,7 +27,8 @@ const ImageSlider = ({ images, width, height }: { images: string[], width: numbe
                 drag="x"
                 dragConstraints={{ left: 0, right: 0 }}
                 dragElastic={1}
-                style={{ width: "100%", height: "100%", position: "relative" }}
+                // style={{ width: "100%", height: "100%", position: "relative" }}
+                className="relative w-full h-full"
                 onDragEnd={(_e, { offset, velocity }) => {
                     const swipe = swipePower(offset.x, velocity.x);
                     if (swipe < -swipeConfidenceThreshold) {

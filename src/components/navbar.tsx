@@ -35,7 +35,7 @@ export const Navbar: FC = () => {
     const hrefs: Href[] = getNavbarLinks(t);
 
     return (
-        <header className="sticky top-0 z-20 lg:h-16 backdrop-blur-md h-12">
+        <header className={`fixed top-0 z-20 lg:h-16 backdrop-blur-md h-14 w-full ${menuOpen ? "h-full" : "h-14"}`}>
             <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 lg:py-3 py-2">
                 <div className="flex items-center justify-between">
                     {/* logo */}
@@ -53,18 +53,16 @@ export const Navbar: FC = () => {
                     {/* lang toggler */}
                     <div className="flex items-center">
                         <LangToggler />
-                        <MenuButton toggleMenu={toggleMenu} menuOpen={menuOpen} /></div>
+                        <MenuButton toggleMenu={toggleMenu} menuOpen={menuOpen} />
+                    </div>
                 </div>
             </nav>
             {/* mobile */}
-            <div
-                className={`md:hidden backdrop-blur-md transition-opacity ease-in-out duration-300 ${menuOpen ? 'opacity-100' : 'opacity-0'} ${!menuOpen ? 'pointer-events-none' : ''}`}
-            >
-                <ul className="px-2 pt-2 pb-3 space-y-1 sm:px-3 h-[100vh] overflow-y-auto">
+            <div className={`md:hidden transition-opacity ease-in-out duration-300 ${menuOpen ? 'opacity-100' : 'opacity-0'} ${!menuOpen ? 'pointer-events-none' : ''}`}>
+                <ul className="ml-2 px-2 pt-2 pb-3 space-y-1 sm:px-3 h-[100vh] overflow-y-auto">
                     <WrapLink hrefs={hrefs} setMenuOpen={setMenuOpen} />
                 </ul>
             </div>
         </header>
-
     );
 }
