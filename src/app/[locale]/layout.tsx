@@ -34,12 +34,9 @@ export default async function LocaleLayout({
   const messages = await getMessages();
 
   return (
-    <NextIntlClientProvider messages={messages}>
-      <html lang={locale} suppressHydrationWarning className="scroll-smooth">
-        <head>
-          <link rel="icon" href="/favicon.ico" />
-        </head>
-        <body className={font.className}>
+    <html lang={locale} suppressHydrationWarning className="scroll-smooth">
+      <body className={font.className}>
+        <NextIntlClientProvider messages={messages}>
           <Providers>
             <Navbar />
             {children}
@@ -47,8 +44,8 @@ export default async function LocaleLayout({
             <ThemeToggler />
             <Footer />
           </Providers>
-        </body>
-      </html>
-    </NextIntlClientProvider>
+        </NextIntlClientProvider>
+      </body>
+    </html>
   );
 }
