@@ -2,8 +2,8 @@ import { useTranslations } from "next-intl"
 import { SectionWrapper } from "./utils/wrapper";
 import React, { FC } from "react";
 import Link from "next/link";
-import { Social, Socials } from "../../lib/social";
-import { socials } from "../../constants/contact/socials";
+import { Social, Socials } from "../lib/social";
+import { socials } from "../lib/constants/contact/socials";
 import { motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";

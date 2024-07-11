@@ -17,6 +17,7 @@ const font = Noto_Sans({
 export const metadata: Metadata = {
   title: "lukaszfabia.dev",
   description: "Lukasz Fabia's personal website",
+  icons: [{ rel: "icon", url: "/favicon.ico" }],
 };
 
 export const viewport = "width=device-width, initial-scale=1.0";

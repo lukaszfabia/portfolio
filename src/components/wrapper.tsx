@@ -1,6 +1,6 @@
 import { FC } from "react";
 import { AnchorButton } from "./ui/buttons/buttons";
-import { SectionWrapperProps } from "../../lib/wrapper";
+import { SectionWrapperProps } from "../lib/wrapper";
 
 export const SectionWrapper: FC<SectionWrapperProps> = ({
   children,

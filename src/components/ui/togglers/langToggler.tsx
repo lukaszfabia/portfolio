@@ -1,10 +1,10 @@
 'use client';
 import React, { FC, useState, useTransition } from 'react';
-import { WrapFlagsProps, Flag } from '../../../../lib/flag';
+import { WrapFlagsProps, Flag } from '../../../lib/flag';
 import { locales } from '@/i18n';
 import { usePathname, useRouter } from 'next/navigation';
-import { POL } from '../../../../constants/pol';
-import { ENG } from '../../../../constants/eng';
+import { POL } from '../../../lib/constants/pol';
+import { ENG } from '../../../lib/constants/eng';
 
 const WrapFlags: FC<WrapFlagsProps> = ({ changeLanguage, availableLangs, flags }) => {
     return (

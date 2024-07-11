@@ -5,7 +5,7 @@ import { FC, useState } from "react";
 import { faBars, faClose, faPaperPlane, faSpinner, faCheck, faHashtag, faDownload } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { handleDownload } from "../../../../lib/scripts/handleCvDownload";
+import { handleDownload } from "../../../lib/scripts/handleCvDownload";
 
 
 

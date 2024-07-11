@@ -1,10 +1,10 @@
 import { useTranslations } from "next-intl";
 import Link from "next/link";
 import React, { FC } from "react";
-import { ProjectProps } from "../../lib/project";
+import { ProjectProps } from "../lib/project";
 import ImageSlider from "./ui/sliders/slider";
 import { SectionWrapper } from "./utils/wrapper";
-import { getProjectProps } from "../../lib/scripts/getProps";
+import { getProjectProps } from "../lib/scripts/getProps";
 
 const ShowcaseConetnt: FC<{
   link: string;

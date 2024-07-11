@@ -3,10 +3,10 @@
 import React, { FC, useState } from 'react';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
-import { Href } from '../../lib/href';
+import { Href } from '../lib/href';
 import LangToggler from './ui/togglers/langToggler';
 import { MenuButton } from './ui/buttons/buttons';
-import { getNavbarLinks } from '../../lib/scripts/getProps';
+import { getNavbarLinks } from '../lib/scripts/getProps';
 
 const WrapLink: FC<{ hrefs: Href[], setMenuOpen: (menuOpen: boolean) => void }> = ({ hrefs, setMenuOpen }) => {
     return (

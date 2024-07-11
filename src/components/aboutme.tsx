@@ -1,9 +1,9 @@
 import { useTranslations } from "next-intl";
-import { TimelineProps } from "../../lib/timeline";
+import { TimelineProps } from "../lib/timeline";
 import React, { FC } from "react";
 import { SectionWrapper } from "./utils/wrapper";
-import { TechStack } from "../../constants/aboutme/techstack";
-import { getTimelineProps } from "../../lib/scripts/getProps";
+import { TechStack } from "../lib/constants/aboutme/techstack";
+import { getTimelineProps } from "../lib/scripts/getProps";
 
 
 const Timeline: FC<{ props: TimelineProps[] }> = ({ props }) => {

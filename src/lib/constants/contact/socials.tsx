@@ -1,6 +1,6 @@
 import { faGithub, faLinkedin, faXTwitter } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Social } from "../../lib/social";
+import { Social } from "../../../lib/social";
 
 const sizes: string = "h-10 w-10";
 
