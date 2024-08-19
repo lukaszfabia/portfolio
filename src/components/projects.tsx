@@ -19,7 +19,7 @@ const ShowcaseConetnt: FC<{
       <div className="px-6 py-4">
         <div className="font-bold text-xl mb-2 md:text-left text-center">
           <Link href={link} target="_blank" className="hover:underline">
-            <code>{title}</code>
+            <h1 className="font-sans font-semibold text-2xl">{title}</h1>
           </Link>
         </div>
         <p className="text-gray-700 dark:text-gray-500 text-base">{desc}</p>
@@ -32,8 +32,8 @@ const ShowcaseTechStack: FC<{ techstack: string[] }> = ({ techstack }) => {
     <>
       <code className="px-6 py-4">tech-stack</code>
       <div className="p-6 flex flex-wrap justify-center items-center">
-        {techstack.map((tech: string, techKey: number) => (
-          <React.Fragment key={techKey}>
+        {techstack.map((tech: string) => (
+          <React.Fragment key={tech}>
             <span className="inline-block bg-gray-200 dark:bg-gray-800 rounded-full px-3 py-1 text-xs md:text-sm font-semibold text-gray-700 dark:text-gray-300 mr-2 mb-2 cursor-default transition-all ease-in-out duration-300 hover:bg-gray-300 dark:hover:bg-gray-700">
               {tech}
             </span>
@@ -47,8 +47,8 @@ const ShowcaseTechStack: FC<{ techstack: string[] }> = ({ techstack }) => {
 const Showcase: FC<{ projects: ProjectProps[] }> = ({ projects }) => {
   return (
     <div className="flex lg:flex-row flex-col items-center justify-center">
-      {projects.map((project, key) => (
-        <React.Fragment key={key}>
+      {projects.map((project: ProjectProps) => (
+        <React.Fragment key={project.title}>
           <div className="max-w-md rounded-xl overflow-hidden m-2 shadow-xl">
             {/* image */}
 

@@ -27,7 +27,6 @@ const ImageSlider = ({ images, width, height }: { images: string[], width: numbe
                 drag="x"
                 dragConstraints={{ left: 0, right: 0 }}
                 dragElastic={1}
-                // style={{ width: "100%", height: "100%", position: "relative" }}
                 className="relative w-full h-full"
                 onDragEnd={(_e, { offset, velocity }) => {
                     const swipe = swipePower(offset.x, velocity.x);
@@ -38,7 +37,7 @@ const ImageSlider = ({ images, width, height }: { images: string[], width: numbe
                     }
                 }}
             >
-                <Image src={images[page]} alt="" width={width} height={height} />
+                <Image src={images[page]} alt={`example ${page + 1}`} width={width} height={height} />
             </motion.div>
             <div className="absolute top-1/2 transform -translate-y-1/2 left-4 cursor-pointer" onClick={() => paginate(-1)}>
                 <FontAwesomeIcon icon={faChevronLeft} className="text-3xl text-gray-700 dark:text-gray-300" />
@@ -46,7 +45,7 @@ const ImageSlider = ({ images, width, height }: { images: string[], width: numbe
             <div className="absolute top-1/2 transform -translate-y-1/2 right-4 cursor-pointer" onClick={() => paginate(1)}>
                 <FontAwesomeIcon icon={faChevronRight} className="text-3xl text-gray-700 dark:text-gray-300" />
             </div>
-        </div >
+        </div>
     );
 };
 

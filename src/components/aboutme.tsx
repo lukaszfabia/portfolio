@@ -10,8 +10,8 @@ const Timeline: FC<{ props: TimelineProps[] }> = ({ props }) => {
     return (
         <div className="md:flex-1 md:mt-0 mt-10">
             <ol className="relative border-s border-gray-200 dark:border-gray-700">
-                {props.map((elem: TimelineProps, index: number) => (
-                    <React.Fragment key={index}>
+                {props.map((elem: TimelineProps) => (
+                    <React.Fragment key={elem.event}>
                         <li className="mb-10 ms-4">
                             <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
                             <time className="mb-1 text-sm font-normal leading-none text-gray-500 dark:text-gray-500">{`${elem.time.month} ${elem.time.year}`}</time>
@@ -29,18 +29,15 @@ const Content: FC<{ t: any }> = ({ t }) => {
     return (
         <div className="md:flex-1 text-lg font-poppins text-center md:text-left md:pr-7">
             {t.rich('content', {
-                n: (chunks: React.ReactNode) => (
+                g: (chunks: React.ReactNode) => (
                     <code className="bg-gradient-to-tr from-blue-900 to-red-500 dark:from-blue-500 dark:to-red-300 inline-block text-transparent bg-clip-text">{chunks}</code>
                 ),
-                f: (chunks: React.ReactNode) => (
+                r: (chunks: React.ReactNode) => (
                     <code className="bg-gradient-to-tr from-emerald-500 to-emerald-700 inline-block text-transparent bg-clip-text">{chunks}</code>
                 ),
-                d: (chunks: React.ReactNode) => (
+                p: (chunks: React.ReactNode) => (
                     <code className="bg-gradient-to-tr from-green-300 to-green-900 inline-block text-transparent bg-clip-text">{chunks}</code>
                 ),
-                postion: (chunks: React.ReactNode) => (
-                    <code className="bg-gradient-to-tr from-rose-400 via-pink-700 to-indigo-800 inline-block text-transparent bg-clip-text">{chunks}</code>
-                )
             })}
             <div className="md:flex-1 md:mt-0 py-10">
                 <h1 className="text-4xl font-semibold text-center text-gray-500 dark:text-gray-400">Worked with</h1>

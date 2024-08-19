@@ -6,7 +6,7 @@
   },
   "Home": {
     "id": "home",
-    "whoami": "Lucas Fabia",
+    "whoami": "Łukasz Fabia",
     "whatido": "Fullstack Developer",
     "desc": "I am a 3rd year student of <f>Appiled Computer Science</f> at the <a>Wroclaw University of Science and Technology</a>. At the end of 2019, I started learning C++ and currently I am mainly interested in web technologies.",
     "cv": "Get CV",
@@ -27,14 +27,14 @@
       "title": "IT Salary Predictor",
       "desc": "A website used to predict earnings and to present the analysis of job offers in the IT industry. Prediction is based on machine learning.",
       "link": "https://github.com/lukaszfabia/it-salary-predictor/",
-      "imgs": "/examples/it-salary-predictor/home.png;/examples/it-salary-predictor/params.png;/examples/it-salary-predictor/salary.png;/examples/it-salary-predictor/stats1.png;/examples/it-salary-predictor/stats2.png",
+      "imgs": "/examples/it-salary-predictor/home.png;/examples/it-salary-predictor/about2.png;/examples/it-salary-predictor/about1.png;/examples/it-salary-predictor/params.png;/examples/it-salary-predictor/stats2.png;/examples/it-salary-predictor/stats1.png",
       "technologies": "Next.js;FastAPI;Python;TailwindCSS"
     }
   },
   "AboutMe": {
     "id": "about",
     "title": "About me",
-    "content": "I have been interested in programming since 2019, but it was only during my studies that I could develop my passion more. Currently, I am most interested in web technologies such as <n>Next.js</n>, <d>Django</d>, <f>FastAPI</f>, but I am not closed to other fields of IT, such as embedded systems. I am a person who tries to create projects that make sense and can be easily scaled. In the future I would like to work as a <postion>Fullstack Developer</postion>",
+    "content": "I have been interested in programming since 2019, but it was only during my studies that I could develop my passion more. Currently, I mostly work and interested with technologies/languages such as <g>Go</g>, <r>React</r>, <p>Python</p>. I strive to create projects with appealing UI/UX that are easily scalable.",
     "exp": {
       "studies": {
         "time": {

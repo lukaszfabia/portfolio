@@ -27,18 +27,18 @@
       "title": "IT Salary Predictor",
       "desc": "Strona internetowa służąca do przewidywania zarobków oraz do prezentacji analizy ofert pracy w branży IT.",
       "link": "https://github.com/lukaszfabia/it-salary-predictor/",
-      "imgs": "/examples/it-salary-predictor/home.png;/examples/it-salary-predictor/params.png;/examples/it-salary-predictor/salary.png;/examples/it-salary-predictor/stats1.png;/examples/it-salary-predictor/stats2.png",
+      "imgs": "/examples/it-salary-predictor/home.png;/examples/it-salary-predictor/about2.png;/examples/it-salary-predictor/about1.png;/examples/it-salary-predictor/params.png;/examples/it-salary-predictor/stats2.png;/examples/it-salary-predictor/stats1.png",
       "technologies": "Next.js;FastAPI;Python;TailwindCSS"
     }
   },
   "AboutMe": {
     "id": "about",
     "title": "O mnie",
-    "content": "Interesuję się programowaniem od 2019 roku, ale dopiero na studiach mogłem bardziej rozwinąć pasję. Obecnie najbardziej interesuję się technologiami webowymi, takimi jak <n>Next.js</n>, <d>Django</d>, <f>FastAPI</f>, ale nie jestem osobą zamkniętą na inne dziedziny Informatyki chociażby takie jak systemy wbudowane. Jestem osobą, która stara się tworzyć projekty mające sens oraz takie, które można łatwo skalować. W przyszłości chciałbym pracować jako <postion>Fullstack Developer</postion>.",
+    "content": "Interesuję się programowaniem od 2019 roku, ale dopiero na studiach mogłem bardziej rozwinąć pasję. Obecnie najbardziej interesuję się oraz pracuję z technologiami/językami, takimi jak <g>Go</g>, <r>React</r>, <p>Python</p>. Staram się tworzyć projekty z atrakcyjnym UI/UX, które są łatwo skalowalne.",
     "exp": {
       "studies": {
         "time": {
-          "month": "Paźdzeirnik",
+          "month": "Październik",
           "year": "2022"
         },
         "event": "Rozpoczęcie studiów na kierunku Informatyka Stosowana na Politechnice Wrocławskiej",
