@@ -7,7 +7,7 @@ import { useTranslations } from "next-intl";
 export const Footer: FC = () => {
     const t = useTranslations("Contact")
     return (
-        <footer className="text-gray-200 bg-[#102c44] font-rubik max-sm:pt-10" id={t("id")} aria-labelledby={t("footer")}>
+        <footer className="text-gray-200 bg-[#102c44] font-rubik max-sm:pt-10" id={t("id")}>
             <div className="w-full mx-auto max-w-screen-xl p-4 flex flex-col items-center space-y-5">
                 <div className="flex items-center justify-center">
                     {socials.map((social: Social) => (

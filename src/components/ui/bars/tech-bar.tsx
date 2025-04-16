@@ -1,4 +1,3 @@
-"use client";
 import { LangProps } from "@/app/api/stats/route";
 import { motion } from "framer-motion";
 

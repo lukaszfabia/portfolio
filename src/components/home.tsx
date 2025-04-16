@@ -6,6 +6,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { FC } from "react";
 import { Typewriter } from "react-simple-typewriter";
 import { CvButton } from "./ui/buttons/buttons";
+import Image from "next/image";
 
 export const Home: FC = () => {
   const t = useTranslations<string>("Home");
@@ -92,11 +93,13 @@ export const Home: FC = () => {
         </div>
 
         <div className="relative z-10 md:flex-1 flex items-center justify-center mb-8 md:mb-0 pt-5 lg:pt-0 md:pb-20">
-          <img
+          <Image
             src={pathToAvatar}
-            alt=""
+            alt="lukasz photo"
             className="rounded-full shadow-lg w-1/3"
             aria-hidden="false"
+            width={400}
+            height={400}
           />
         </div>
       </section>

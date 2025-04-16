@@ -75,8 +75,18 @@ export async function GET() {
     });
 
     const json = await res.json();
-    const data = json as { data: { user: { repositories: { nodes: Repository[] } } } };
-    const proccessed = preprocess(data.data.user.repositories.nodes)
 
-    return NextResponse.json(proccessed);
+    if (json.errors) {
+        return NextResponse.json({ error: "GitHub API error" });
+    }
+
+    const data = json as { data: { user: { repositories: { nodes: Repository[] } } } };
+
+    if (!data.data?.user?.repositories?.nodes) {
+        return NextResponse.json({ error: "Failed to get data" });
+    }
+
+    const processed = preprocess(data.data.user.repositories.nodes);
+
+    return NextResponse.json(processed);
 }

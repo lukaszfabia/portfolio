@@ -16,7 +16,6 @@ export default function Index() {
         { Component: Home, key: 'home' },
         { Component: Projects, key: 'projects' },
         { Component: AboutMe, key: 'aboutme' },
-        // { Component: Contact, key: 'contact' }
     ];
 
     return (

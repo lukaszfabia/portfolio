@@ -1,3 +1,5 @@
+"use client";
+
 import React, { FC, useEffect, useState } from "react";
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
@@ -27,10 +29,8 @@ export const AboutMe: FC = () => {
             }
         };
 
-        if (popularTechs.length === 0) {
-            f();
-        }
-    }, [popularTechs]);
+        f();
+    }, []);
 
     const t = useTranslations<string>('AboutMe');
     const studies: TimelineProps = getTimelineProps(t, 'studies');
@@ -52,7 +52,6 @@ export const AboutMe: FC = () => {
             <div className="z-10 w-full flex flex-col gap-12 text-white">
                 <div className="flex flex-col lg:flex-row gap-12">
 
-                    {/* Left - Timeline */}
                     <motion.div className="flex-1 space-y-5" {...fadeProps}>
                         <h1
                             className="lg:text-7xl md:text-5xl text-3xl font-bold font-rubik leading-tight"
@@ -64,7 +63,6 @@ export const AboutMe: FC = () => {
                         <Timeline props={props} />
                     </motion.div>
 
-                    {/* Right - About + Tech */}
                     <motion.div className="flex-1 space-y-10" {...fadeProps}>
                         <div className="text-right">
                             <h2
