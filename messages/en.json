@@ -7,34 +7,58 @@
   "Home": {
     "id": "home",
     "whoami": "Łukasz Fabia",
-    "whatido": "Fullstack Developer",
-    "desc": "I am a 3rd year student of <f>Appiled Computer Science</f> at the <a>Wroclaw University of Science and Technology</a>. At the end of 2019, I started learning C++ and currently I am mainly interested in web technologies.",
+    "whatido": {
+      "1": "Fullstack Developer",
+      "2": "Golang Enjoyer"
+    },
+    "desc": "I am a 3rd year student of <f>Appiled Computer Science</f> at the <a>Wroclaw University of Science and Technology</a>. At the end of 2019, I started with C++ but currently I am mainly interested in web technologies.",
     "cv": "Get CV",
     "afterDownload": "Done",
-    "contact": "Contact"
+    "contact": "Contact",
+    "universityLink": "Wroclaw University of Science and Technology"
   },
   "Projects": {
     "id": "projects",
     "title": "Projects",
+    "subtitle": "My work effects",
+    "paragraph": "Some of my proudest nerd moments",
     "myanimedb": {
       "title": "MyAnimeDB",
+      "subtitle": "Website for anime fans",
       "desc": "A web application for viewing and rating anime, created on the model of MyAnimeList.net and Shinden.pl. Made as part of a class subject.",
       "imgs": "/examples/myanimedb/anime_search.png;/examples/myanimedb/home_page_posts.png;/examples/myanimedb/home_page.png;/examples/myanimedb/login.png;/examples/myanimedb/profile.png;/examples/myanimedb/restore_password.png;/examples/myanimedb/settings.png;/examples/myanimedb/mylist.png",
-      "link": "https://github.com/lukaszfabia/myAnimeDB/",
-      "technologies": "React.js;Bootstrap 5;Django"
+      "link": "https://github.com/lukaszfabia/my-anime-db",
+      "technologies": "Next.js;TailwindCSS;Go;PostgreSQL"
     },
     "it-salary-predictor": {
       "title": "IT Salary Predictor",
+      "subtitle": "Earnings calculator",
       "desc": "A website used to predict earnings and to present the analysis of job offers in the IT industry. Prediction is based on machine learning.",
       "link": "https://github.com/lukaszfabia/it-salary-predictor/",
       "imgs": "/examples/it-salary-predictor/home.png;/examples/it-salary-predictor/about2.png;/examples/it-salary-predictor/about1.png;/examples/it-salary-predictor/params.png;/examples/it-salary-predictor/stats2.png;/examples/it-salary-predictor/stats1.png",
-      "technologies": "Next.js;FastAPI;Python;TailwindCSS"
+      "technologies": "Next.js;FastAPI;Python;TailwindCSS;MongoDB"
+    },
+    "chatterbox": {
+      "title": "Chatterbox",
+      "subtitle": "Simple chat web app writted with microservices",
+      "desc": "Used simplified CQRS pattern and event-driven architecture. Microservices communicate with each other by RabbitMQ broker. We can communicate in real time, gettings notifications and more...",
+      "link": "https://github.com/lukaszfabia/chatterbox/",
+      "technologies": "Next.js;FastAPI;TailwindCSS;MongoDB;RabbitMQ;PostgreSQL;Go;Express;Docker"
+    },
+    "l2play": {
+      "title": "L2Play",
+      "subtitle": "Mobile iOS app",
+      "desc": "Social media application for gamers, you can create posts follow people, exploring games and get recommendations based on your game collections.",
+      "link": "https://github.com/lukaszfabia/l2play/",
+      "technologies": "Swift;XCode;iOS;Firebase"
     }
   },
   "AboutMe": {
+    "exptitle": "Exp",
     "id": "about",
+    "subtitle": "something",
     "title": "About me",
-    "content": "I have been interested in programming since 2019, but it was only during my studies that I could develop my passion more. Currently, I mostly work and interested with technologies/languages such as <g>Go</g>, <r>React</r>, <p>Python</p>. I strive to create projects with appealing UI/UX that are easily scalable.",
+    "content": "Currently, I work most in the area of ​​Web Development. On the frontend side, I work most often with Next.js, while the backend is created in Go, FastAPI or - depending on the project - Nest.js or Spring. Recently, I have become particularly interested in microservice architectures, especially event-driven and CQRS-based approaches.",
     "exp": {
       "studies": {
         "time": {
@@ -52,7 +76,9 @@
         "event": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur elit ut arcu commodo, ac dictum velit vestibulum. Proin id ornare dui, nec egestas nibh. Morbi quis ornare neque, et semper dui. Quisque varius dolor at lacus sodales pulvinar. Suspendisse mollis iaculis mauris, id gravida augue accumsan ut. Sed vulputate euismod feugiat."
       }
-    }
+    },
+    "mystacksubtitle": "My most popular langs and frameworks",
+    "mystacktitle": "Everyday use"
   },
   "Contact": {
     "id": "contact",

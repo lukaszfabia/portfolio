@@ -7,34 +7,58 @@
   "Home": {
     "id": "home",
     "whoami": "Łukasz Fabia",
-    "whatido": "Fullstack Developer",
+    "whatido": {
+      "1": "Fullstack Developer",
+      "2": "Golang <3"
+    },
     "desc": "Jestem studentem 3 roku <f>Informatyki Stosowanej</f> na <a>Politechnice Wrocławskiej</a>. Końcem 2019 roku rozpoczynałem swoją naukę z C++ a obecnie interesuję się głównie technologiami webowymi.",
     "cv": "Pobierz CV",
     "afterDownload": "Pobrano",
-    "contact": "Kontakt"
+    "contact": "Kontakt",
+    "universityLink": "Politechnika Wrocławska"
   },
   "Projects": {
     "id": "projects",
     "title": "Projekty",
+    "subtitle": "Efekty mojej pracy",
+    "paragraph": "Kilka projektów, z których mój wewnętrzny nerd jest wyjątkowo dumny",
     "myanimedb": {
       "title": "MyAnimeDB",
-      "desc": "Strona internetowa do przeglądania i oceniania anime, stworzona na wzór MyAnimeList.net oraz Shinden.pl. Wykonana w ramach przedmiotu na zajęcia.",
+      "subtitle": "Strona dla fanów anime",
+      "desc": "Aplikacja internetowa do przeglądania i oceniania anime, stworzona na wzór MyAnimeList.net i Shinden.pl. Zrealizowana jako część przedmiotu na studiach.",
       "imgs": "/examples/myanimedb/anime_search.png;/examples/myanimedb/home_page_posts.png;/examples/myanimedb/home_page.png;/examples/myanimedb/login.png;/examples/myanimedb/profile.png;/examples/myanimedb/restore_password.png;/examples/myanimedb/settings.png;/examples/myanimedb/mylist.png",
-      "link": "https://github.com/lukaszfabia/myAnimeDB/",
-      "technologies": "React.js;Bootstrap 5;Django;Python"
+      "link": "https://github.com/lukaszfabia/my-anime-db",
+      "technologies": "Next.js;TailwindCSS;Go;PostgreSQL"
     },
     "it-salary-predictor": {
       "title": "IT Salary Predictor",
-      "desc": "Strona internetowa służąca do przewidywania zarobków oraz do prezentacji analizy ofert pracy w branży IT.",
+      "subtitle": "Kalkulator zarobków",
+      "desc": "Strona internetowa służąca do prognozowania zarobków i przedstawiania analizy ofert pracy w branży IT. Prognoza opiera się na uczeniu maszynowym.",
       "link": "https://github.com/lukaszfabia/it-salary-predictor/",
       "imgs": "/examples/it-salary-predictor/home.png;/examples/it-salary-predictor/about2.png;/examples/it-salary-predictor/about1.png;/examples/it-salary-predictor/params.png;/examples/it-salary-predictor/stats2.png;/examples/it-salary-predictor/stats1.png",
-      "technologies": "Next.js;FastAPI;Python;TailwindCSS"
+      "technologies": "Next.js;FastAPI;Python;TailwindCSS;MongoDB"
+    },
+    "chatterbox": {
+      "title": "Chatterbox",
+      "subtitle": "Prosta aplikacja czatowa napisana w mikroserwisach",
+      "desc": "Zastosowano uproszczony wzorzec CQRS i architekturę opartą na zdarzeniach. Mikroserwisy komunikują się ze sobą za pomocą brokera RabbitMQ. Możliwość komunikacji w czasie rzeczywistym, otrzymywania powiadomień i wiele innych...",
+      "link": "https://github.com/lukaszfabia/chatterbox/",
+      "technologies": "Next.js;FastAPI;TailwindCSS;MongoDB;RabbitMQ;PostgreSQL;Go;Express;Docker"
+    },
+    "l2play": {
+      "title": "L2Play",
+      "subtitle": "Mobilna aplikacja iOS",
+      "desc": "Aplikacja społecznościowa dla graczy, umożliwiająca tworzenie postów, obserwowanie osób, eksplorowanie gier oraz otrzymywanie rekomendacji na podstawie kolekcji gier.",
+      "link": "https://github.com/lukaszfabia/l2play/",
+      "technologies": "Swift;XCode;iOS;Firebase"
     }
   },
   "AboutMe": {
     "id": "about",
     "title": "O mnie",
-    "content": "Interesuję się programowaniem od 2019 roku, ale dopiero na studiach mogłem bardziej rozwinąć pasję. Obecnie najbardziej interesuję się oraz pracuję z technologiami/językami, takimi jak <g>Go</g>, <r>React</r>, <p>Python</p>. Staram się tworzyć projekty z atrakcyjnym UI/UX, które są łatwo skalowalne.",
+    "subtitle": "co nie co",
+    "content": "Obecnie najwięcej działam w obszarze Web Developmentu. Po stronie frontendu najczęściej pracuję z Next.js, natomiast backend tworzę w Go, FastAPI lub – w zależności od projektu – Nest.js czy Springu. W ostatnim czasie szczególnie zainteresowały mnie architektury mikroserwisowe, zwłaszcza podejścia oparte na event-driven i CQRS.",
+    "exptitle": "Doświadczenie",
     "exp": {
       "studies": {
         "time": {
@@ -42,17 +66,11 @@
           "year": "2022"
         },
         "event": "Rozpoczęcie studiów na kierunku Informatyka Stosowana na Politechnice Wrocławskiej",
-        "desc": "Studia pozwoliły mi na rozwinięcie pasji do programowania, nauczyły mnie pracy w grupie, oraz dostaryczyły mi ogrom teorii informatycznej."
-      },
-      "work1": {
-        "time": {
-          "month": "Lorem",
-          "year": "ipsum"
-        },
-        "event": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur elit ut arcu commodo, ac dictum velit vestibulum. Proin id ornare dui, nec egestas nibh. Morbi quis ornare neque, et semper dui. Quisque varius dolor at lacus sodales pulvinar. Suspendisse mollis iaculis mauris, id gravida augue accumsan ut. Sed vulputate euismod feugiat."
+        "desc": "Studia pozwoliły mi pozanać wytwarzanie oprogramowania z bardziej teoretycznej strony, ale także nauczyły cierpliwości i pracy pod presją."
       }
-    }
+    },
+    "mystacksubtitle": "Moje najpopularniejsze języki i frameworki",
+    "mystacktitle": "Na co dzień korzystam"
   },
   "Contact": {
     "id": "contact",

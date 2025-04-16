@@ -1,28 +1,27 @@
-import DockerIcon from "../../../../public/techs/docker.svg";
-import PythonIcon from "../../../../public/techs/python.svg";
-import BashIcon from "../../../../public/techs/bash.svg";
-import TypeScriptIcon from "../../../../public/techs/ts.svg";
-import GitIcon from "../../../../public/techs/git.svg";
-import CssIcon from "../../../../public/techs/css.svg";
-import HtmlIcon from "../../../../public/techs/html.svg";
-import GoIcon from "../../../../public/techs/golang.svg";
-import PostgresIcon from "../../../../public/techs/postgres.svg";
-import JsIcon from "../../../../public/techs/js.svg";
-import { FC } from "react";
+import { SiNextdotjs, SiFastapi, SiGo, SiSwift, SiDocker, SiArchlinux, SiMacos, SiRabbitmq, SiPostgresql, SiMongodb, SiTailwindcss } from "@icons-pack/react-simple-icons";
 
-export const TechStack: FC = () => {
+const techList = [
+  { icon: SiNextdotjs, name: 'Next.js' },
+  { icon: SiFastapi, name: 'FastAPI' },
+  { icon: SiGo, name: 'Go' },
+  { icon: SiSwift, name: 'Swift' },
+  { icon: SiDocker, name: 'Docker' },
+  { icon: SiArchlinux, name: 'Arch Linux' },
+  { icon: SiMacos, name: 'macOS' },
+  { icon: SiRabbitmq, name: 'RabbitMQ' },
+  { icon: SiPostgresql, name: 'PostgreSQL' },
+  { icon: SiMongodb, name: 'MongoDB' },
+  { icon: SiTailwindcss, name: 'TailwindCSS' },
+];
+
+export const TechIcons = () => {
   return (
-    <div className="flex flex-wrap justify-center items-center py-5">
-      <DockerIcon />
-      <PythonIcon />
-      <GoIcon />
-      <BashIcon />
-      <TypeScriptIcon />
-      <JsIcon />
-      <GitIcon />
-      <CssIcon />
-      <HtmlIcon />
-      <PostgresIcon />
+    <div className="flex flex-wrap justify-center gap-6 py-6">
+      {techList.map(({ icon: Icon, name }) => (
+        <div key={name} className="flex flex-col items-center" title={name}>
+          <Icon size={50} />
+        </div>
+      ))}
     </div>
   );
 };

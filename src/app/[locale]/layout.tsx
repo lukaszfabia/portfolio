@@ -3,11 +3,9 @@ import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import "./globals.css";
 import { Noto_Sans } from "next/font/google";
-import { Providers } from "../provider";
 import { Footer } from "@/components/footer";
 import { Navbar } from "@/components/navbar";
-import ThemeToggler from "@/components/ui/togglers/themeToggler";
-import { GoUp } from "@/components/ui/buttons/goUp";
+import { GoUp } from "@/components/ui/buttons/go-up";
 
 const font = Noto_Sans({
   subsets: ["latin"],
@@ -34,16 +32,13 @@ export default async function LocaleLayout({
   const messages = await getMessages();
 
   return (
-    <html lang={locale} suppressHydrationWarning className="scroll-smooth">
+    <html lang={locale} suppressHydrationWarning>
       <body className={font.className}>
         <NextIntlClientProvider messages={messages}>
-          <Providers>
-            <Navbar />
-            {children}
-            <GoUp />
-            <ThemeToggler />
-            <Footer />
-          </Providers>
+          <Navbar />
+          {children}
+          <GoUp />
+          <Footer />
         </NextIntlClientProvider>
       </body>
     </html>

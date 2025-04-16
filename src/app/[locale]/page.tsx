@@ -1,39 +1,30 @@
 'use client';
 
-import { motion, useScroll, useSpring } from 'framer-motion';
+
 import { Home } from '@/components/home';
 import { Projects } from '@/components/projects';
 import { AboutMe } from '@/components/aboutme';
-import { Contact } from '@/components/contact';
 import React from 'react';
+import ProgressBar from '@/components/ui/bars/progress-bar';
 import { FadeInSection } from '@/components/animations/fadeInSection';
 
 
 export default function Index() {
-    const { scrollYProgress } = useScroll();
-    const scaleX = useSpring(scrollYProgress, {
-        stiffness: 100,
-        damping: 30,
-        restDelta: 0.001
-    });
 
+    // register your elements here
     const components: { Component: React.ComponentType; key: string }[] = [
         { Component: Home, key: 'home' },
         { Component: Projects, key: 'projects' },
         { Component: AboutMe, key: 'aboutme' },
-        { Component: Contact, key: 'contact' }
+        // { Component: Contact, key: 'contact' }
     ];
 
     return (
         <>
-            <motion.div className="fixed top-0 left-0 right-0 h-1 bg-gray-200 dark:bg-gray-800 z-30" style={{ scaleX: scaleX, transformOrigin: "0%" }} />
-            <main className='p-8 md:p-32 mt-10'>
-                {components.map(({ Component, key }, index) => (
-                    <FadeInSection key={key} delay={index * 0.1}>
-                        <Component />
-                    </FadeInSection>
-                ))}
-            </main>
+            <ProgressBar />
+            {components.map(({ Component, key }) => (
+                <Component key={key} />
+            ))}
         </>
     );
 }

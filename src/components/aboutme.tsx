@@ -1,70 +1,130 @@
+import React, { FC, useEffect, useState } from "react";
 import { useTranslations } from "next-intl";
+import { motion } from "framer-motion";
 import { TimelineProps } from "../lib/timeline";
-import React, { FC } from "react";
-import { SectionWrapper } from "./utils/wrapper";
-import { TechStack } from "../lib/constants/aboutme/techstack";
-import { getTimelineProps } from "../lib/scripts/getProps";
-
-
-const Timeline: FC<{ props: TimelineProps[] }> = ({ props }) => {
-    return (
-        <div className="md:flex-1 md:mt-0 mt-10">
-            <ol className="relative border-s border-gray-200 dark:border-gray-700">
-                {props.map((elem: TimelineProps) => (
-                    <React.Fragment key={elem.event}>
-                        <li className="mb-10 ms-4">
-                            <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
-                            <time className="mb-1 text-sm font-normal leading-none text-gray-500 dark:text-gray-500">{`${elem.time.month} ${elem.time.year}`}</time>
-                            <h3 className="text-lg font-semibold text-gray-900 dark:text-white">{elem.event}</h3>
-                            <p className="mb-4 text-base font-normal text-gray-600 dark:text-gray-400">{elem.desc}</p>
-                        </li>
-                    </React.Fragment>
-                ))}
-            </ol>
-        </div>
-    )
-}
-
-const Content: FC<{ t: any }> = ({ t }) => {
-    return (
-        <div className="md:flex-1 text-lg font-poppins text-center md:text-left md:pr-7">
-            {t.rich('content', {
-                g: (chunks: React.ReactNode) => (
-                    <code className="bg-gradient-to-tr from-blue-900 to-red-500 dark:from-blue-500 dark:to-red-300 inline-block text-transparent bg-clip-text">{chunks}</code>
-                ),
-                r: (chunks: React.ReactNode) => (
-                    <code className="bg-gradient-to-tr from-emerald-500 to-emerald-700 inline-block text-transparent bg-clip-text">{chunks}</code>
-                ),
-                p: (chunks: React.ReactNode) => (
-                    <code className="bg-gradient-to-tr from-green-300 to-green-900 inline-block text-transparent bg-clip-text">{chunks}</code>
-                ),
-            })}
-            <div className="md:flex-1 md:mt-0 py-10">
-                <h1 className="text-4xl font-semibold text-center text-gray-500 dark:text-gray-400">Worked with</h1>
-                <TechStack />
-            </div>
-        </div>
-    )
-}
-
-
+import { getTimelineProps } from "../lib/scripts/get-props";
+import { LangProps } from "@/app/api/stats/route";
+import { LanguageBars } from "./ui/bars/tech-bar";
+import { TechIcons } from "@/lib/constants/aboutme/techstack";
+import Timeline from "./ui/time/timeline";
 
 export const AboutMe: FC = () => {
+    const [isLoading, setIsLoading] = useState(false);
+    const [error, setError] = useState<string | null>(null);
+    const [popularTechs, setPopularTechs] = useState<LangProps[]>([]);
+
+    useEffect(() => {
+        const f = async () => {
+            setIsLoading(true);
+            setError(null);
+            try {
+                const res = await fetch('/api/stats');
+                setPopularTechs(await res.json());
+            } catch {
+                setError("Failed to fetch techs");
+            } finally {
+                setIsLoading(false);
+            }
+        };
+
+        if (popularTechs.length === 0) {
+            f();
+        }
+    }, [popularTechs]);
+
     const t = useTranslations<string>('AboutMe');
-
     const studies: TimelineProps = getTimelineProps(t, 'studies');
+    const props: TimelineProps[] = [studies];
 
-    const work1: TimelineProps = getTimelineProps(t, 'work1');
-
-    const props: TimelineProps[] = [work1, studies]; // from newest to oldest event
-
+    const fadeProps = {
+        initial: { opacity: 0, y: 30 },
+        whileInView: { opacity: 1, y: 0 },
+        viewport: { once: true, amount: 0.2 },
+        transition: { duration: 0.6, ease: "easeOut" }
+    };
 
     return (
-        <SectionWrapper t={t} gradient="from-blue-300 via-red-500 to-amber-500">
-            <div className="md:flex flex-row md:mb-10">
-                <Content t={t} />
-                <Timeline props={props} />
+        <section
+            className="relative flex flex-col-reverse md:flex-row justify-center items-center min-h-screen md:px-20 px-6 bg-navy overflow-hidden"
+            id={t("id")}
+            aria-labelledby={t("id")}
+        >
+            <div className="z-10 w-full flex flex-col gap-12 text-white">
+                <div className="flex flex-col lg:flex-row gap-12">
+
+                    {/* Left - Timeline */}
+                    <motion.div className="flex-1 space-y-5" {...fadeProps}>
+                        <h1
+                            className="lg:text-7xl md:text-5xl text-3xl font-bold font-rubik leading-tight"
+                            aria-level={1}
+                            role="heading"
+                        >
+                            {t('exptitle')}
+                        </h1>
+                        <Timeline props={props} />
+                    </motion.div>
+
+                    {/* Right - About + Tech */}
+                    <motion.div className="flex-1 space-y-10" {...fadeProps}>
+                        <div className="text-right">
+                            <h2
+                                className="md:text-xl text-md uppercase tracking-widest text-gray-300"
+                                aria-level={2}
+                                role="heading"
+                            >
+                                {t("subtitle")}
+                            </h2>
+                            <h1
+                                className="lg:text-7xl md:text-5xl text-3xl font-bold font-rubik leading-tight"
+                                aria-level={1}
+                                role="heading"
+                            >
+                                {t("title")}
+                            </h1>
+                        </div>
+
+                        <motion.div className="border-l-4 border-gray-300 pl-6" {...fadeProps}>
+                            <p
+                                className="lg:text-lg italic text-gray-200"
+                                aria-describedby="aboutme-content"
+                            >
+                                {t("content")}
+                            </p>
+                        </motion.div>
+
+                        <motion.div
+                            className="backdrop-blur-lg bg-white/10 rounded-2xl border border-white/20 shadow-2xl p-8"
+                            {...fadeProps}
+                        >
+                            <h2
+                                className="md:text-base text-sm uppercase tracking-widest text-white/80"
+                                aria-level={2}
+                                role="heading"
+                            >
+                                {t('mystacksubtitle')}
+                            </h2>
+                            <h1
+                                className="lg:text-3xl md:text-2xl text-xl font-bold font-rubik text-white mt-1"
+                                aria-level={1}
+                                role="heading"
+                            >
+                                {t('mystacktitle')}
+                            </h1>
+
+                            <div className="flex flex-col lg:flex-row gap-6 mt-6">
+                                <div className="flex-1">
+                                    <LanguageBars data={popularTechs} error={error} isLoading={isLoading} />
+                                </div>
+                                <div className="flex-1 text-white/90 font-light leading-relaxed flex items-center gap-5 justify-center">
+                                    <TechIcons />
+                                </div>
+                            </div>
+                        </motion.div>
+                    </motion.div>
+                </div>
             </div>
-        </SectionWrapper>
-    )
-}
+
+            <div className="absolute inset-0 z-0 pointer-events-none layer3 bg-cover bg-center opacity-20" />
+        </section>
+    );
+};
